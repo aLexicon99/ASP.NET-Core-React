@@ -1,1 +1,2 @@
 C:\Users\Dell\Documents\DEV\X_Git_aLexicon99\ReactApp-ASP.NET-Core\reactapp-asp.net-core.client\obj\Debug\reactapp-asp.net-core.client.esproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\DEV\X_Git_aLexicon99\ASP.NET Core + React\reactapp-asp.net-core.client\obj\Debug\reactapp-asp.net-core.client.esproj.CoreCompileInputs.cache
