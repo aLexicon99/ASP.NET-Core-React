@@ -1,4 +1,4 @@
-namespace ReactApp_ASP.NET_Core.Server
+namespace ReactApp_ASP.NET_Core.Server.Models
 {
     public class WeatherForecast
     {

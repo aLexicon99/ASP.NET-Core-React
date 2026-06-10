@@ -37,8 +37,11 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
 const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
     env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'https://localhost:7207';
 
+
+
 // https://vitejs.dev/config/
-export default defineConfig({
+
+const configSettings = {
     plugins: [plugin()],
     resolve: {
         alias: {
@@ -50,6 +53,10 @@ export default defineConfig({
             '^/weatherforecast': {
                 target,
                 secure: false
+            },
+            '^/test': {
+                target: "http://localhost:5136",
+                secure: false
             }
         },
         port: parseInt(env.DEV_SERVER_PORT || '52615'),
@@ -58,4 +65,19 @@ export default defineConfig({
             cert: fs.readFileSync(certFilePath),
         }
     }
-})
+}
+
+export default defineConfig(configSettings);
+
+
+console.log('-------------------- VITE SETTINGS -----------------------------')
+console.log('FRONTEND PORT : ' + JSON.stringify(configSettings.server.port));
+console.log('BACKEND TARGET : ' + target);
+console.log('BASE FOLDER  : ' + baseFolder);
+console.log('CERT PATH : ' + certFilePath);
+console.log('-------------------------------------------------')
+
+// console.log('PROXY: ' + JSON.stringify(configSettings.server.proxy['^/test']));
+// console.log('PROXY: ' + JSON.stringify(configSettings.server.proxy));
+// console.log('-------------------------------------------------')
+

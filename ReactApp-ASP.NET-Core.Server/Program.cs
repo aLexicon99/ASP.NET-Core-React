@@ -7,8 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 // Add Swagger services
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -22,12 +22,12 @@ if (app.Environment.IsDevelopment())
 }
 
 // Enable Swagger middleware
-app.UseSwagger();
-app.UseSwaggerUI();
+//app.UseSwagger();
+//app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 

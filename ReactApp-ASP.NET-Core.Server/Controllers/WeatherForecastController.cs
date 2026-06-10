@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ReactApp_ASP.NET_Core.Server.Models;
 
 namespace ReactApp_ASP.NET_Core.Server.Controllers
 {
@@ -22,5 +23,17 @@ namespace ReactApp_ASP.NET_Core.Server.Controllers
             })
             .ToArray();
         }
+
+        //[HttpGet]
+        //public IActionResult Get(int id)
+        //{
+        //    var products = new[]
+        //    {
+        //        new { Id = 1, Name = "Laptop", Price = 80000 },
+        //        new { Id = 2, Name = "Mobile", Price = 30000 }
+        //    };
+
+        //    return Ok(products);
+        //}
     }
 }
